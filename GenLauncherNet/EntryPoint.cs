@@ -28,7 +28,7 @@ namespace GenLauncherNet
         public const string OriginalGameAlias = "Original Game";
 
         public const string ZHRepos =
-            @"https://raw.githubusercontent.com/p0ls3r/GenLauncherModsData/master/ReposModificationDataZH4.yaml";
+            @"https://raw.githubusercontent.com/nathan-soul/GenLauncherModsData/master/ReposModificationDataZH4.yaml";
 
         public const string GenRepos =
            @"https://raw.githubusercontent.com/p0ls3r/GenLauncherModsData/master/ReposModificationDataGenerals3.yaml";
