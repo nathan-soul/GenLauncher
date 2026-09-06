@@ -10,6 +10,10 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Net;
+using System.Net.Security;
+using System.Security.Authentication;
+using System.Security.Cryptography.X509Certificates;
 using WPFLocalizeExtension.Engine;
 
 namespace GenLauncherNet
@@ -81,6 +85,9 @@ namespace GenLauncherNet
         [System.STAThreadAttribute()]
         public static void Main()
         {
+            // Enable TLS 1.2 for GitHub/HTTPS connections
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls13;
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             try
             {
                 if (File.Exists(LauncherFolder + "eng"))
